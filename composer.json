@@ -1,7 +1,7 @@
 {
   "name":"heart-bits/contao-reviews-bundle",
   "description":"Create client reviews in Contao Open Source CMS",
-  "keywords":["contao", "contacts", "kontakte"],
+  "keywords":["contao", "reviews", "rezensionen"],
   "type":"contao-bundle",
   "license":"LGPL-3.0+",
   "authors":[
