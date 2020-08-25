@@ -1,0 +1,42 @@
+{
+  "name":"heart-bits/contao-reviews-bundle",
+  "description":"Create client reviews in Contao Open Source CMS",
+  "keywords":["contao", "contacts", "kontakte"],
+  "type":"contao-bundle",
+  "license":"LGPL-3.0+",
+  "authors":[
+    {
+      "name":"heart-bits",
+      "homepage":"http://heart-bits.com",
+      "role":"Developer"
+    }
+  ],
+  "support":{
+  	"email": "hi@heart-bits.com",
+		"issues":"https://github.com/heart-bits/contao-reviews-bundle/issues",
+		"source":"https://github.com/heart-bits/contao-reviews-bundle"
+	},
+  "require":{
+    "php":">=7.1.0",
+    "contao/core-bundle": "~4.4",
+    "heart-bits/contao-contacts-bundle": "~1.0"
+  },
+  "require-dev": {
+    "contao/manager-bundle": "~4.9"
+  },
+  "autoload": {
+    "psr-4": { "Heartbits\\ContaoReviews\\": "src/" },
+    "classmap": [
+      "src/Resources/contao/"
+    ],
+    "exclude-from-classmap": [
+      "src/Resources/contao/config/",
+      "src/Resources/contao/dca/",
+      "src/Resources/contao/languages/",
+      "src/Resources/contao/templates/"
+    ]
+  },
+  "extra":{
+    "contao-manager-plugin": "Heartbits\\ContaoReviews\\ContaoManager\\Plugin"
+  }
+}

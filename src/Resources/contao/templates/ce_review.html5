@@ -1,0 +1,25 @@
+<?php $this->extend('block_searchable'); ?>
+
+<?php $this->block('content'); ?>
+
+<?php if($this->reviews): ?>
+    <?php foreach ($this->reviews as $review): ?>
+        <div class="review">
+            <?php if ($review['author']['singleSRC'] || $review['author']['lastname'] || $review['author']['firstname']): ?>
+                <div class="review-author">
+                    <?php if ($review['author']['singleSRC']): ?>
+                        <?php $this->insert('image', $review['author']['singleSRC']); ?>
+                    <?php endif; ?>
+                    <?php if ($review['author']['lastname'] || $review['author']['firstname']): ?><span class="author-name"><?php if ($review['author']['firstname']): ?><?= $review['author']['firstname'] ?> <?php endif; ?><?php if ($review['author']['lastname']): ?><?= $review['author']['lastname'] ?><?php endif; ?></span><?php endif; ?>
+                    <?php if ($review['author']['company_name']): ?><span class="author-company"><?php if ($review['author']['company_href']): ?><a href="<?= $review['author']['company_href'] ?>" title="<?= sprintf($this->trans('tl_reviews.visitCompanyWebsite'), $review['author']['company_name']) ?>"><?php endif; ?><?= $review['author']['company_name'] ?><?php if ($review['author']['company_href']): ?></a><?php endif; ?></span><?php endif; ?>
+                </div>
+            <?php endif; ?>
+            <div class="review-content">
+                <?= $review['quote'] ?>
+            </div>
+        </div>
+    <?php endforeach; ?>
+<?php else: ?>
+    <p class="error"><?= $this->trans('tl_reviews.noEntriesFound') ?></p>
+<?php endif; ?>
+<?php $this->endblock(); ?>

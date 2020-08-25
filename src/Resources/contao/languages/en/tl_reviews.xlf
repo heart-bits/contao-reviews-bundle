@@ -1,0 +1,86 @@
+<?xml version="1.0" ?><xliff version="1.1">
+    <file datatype="php" original="src/Resources/contao/languages/en/tl_reviews.php" source-language="en" target-language="en">
+        <body>
+            <trans-unit id="tl_reviews.general_legend">
+                <source>General settings</source>
+                <target>General settings</target>
+            </trans-unit>
+            <trans-unit id="tl_reviews.review_legend">
+                <source>Review settings</source>
+                <target>Review settings</target>
+            </trans-unit>
+            <trans-unit id="tl_reviews.expert_legend">
+                <source>Expert settings</source>
+                <target>Expert settings</target>
+            </trans-unit>
+            <trans-unit id="tl_reviews.new.0">
+                <source>New review</source>
+                <target>New review</target>
+            </trans-unit>
+            <trans-unit id="tl_reviews.new.1">
+                <source>Add a new review</source>
+                <target>Add a new review</target>
+            </trans-unit>
+            <trans-unit id="tl_reviews.edit.0">
+                <source>Edit review</source>
+                <target>Edit review</target>
+            </trans-unit>
+            <trans-unit id="tl_reviews.edit.1">
+                <source>Edit review ID %s</source>
+                <target>Edit review ID %s</target>
+            </trans-unit>
+            <trans-unit id="tl_reviews.delete.0">
+                <source>Edit review ID %s</source>
+                <target>Edit review ID %s</target>
+            </trans-unit>
+            <trans-unit id="tl_reviews.delete.1">
+                <source>Delete review ID %s</source>
+                <target>Delete review ID %s</target>
+            </trans-unit>
+            <trans-unit id="tl_reviews.show.0">
+                <source>Review details</source>
+                <target>Review details</target>
+            </trans-unit>
+            <trans-unit id="tl_reviews.show.1">
+                <source>Details of the review ID %s</source>
+                <target>Details of the review ID %s</target>
+            </trans-unit>
+            <trans-unit id="tl_reviews.title.0">
+                <source>Title</source>
+                <target>Title</target>
+            </trans-unit>
+            <trans-unit id="tl_reviews.title.1">
+                <source>Title of the review</source>
+                <target>Title of the review</target>
+            </trans-unit>
+            <trans-unit id="tl_reviews.author.0">
+                <source>Author</source>
+                <target>Author</target>
+            </trans-unit>
+            <trans-unit id="tl_reviews.author.1">
+                <source>Choose the author</source>
+                <target>Choose the author</target>
+            </trans-unit>
+            <trans-unit id="tl_reviews.quote.0">
+                <source>Quote</source>
+                <target>Quote</target>
+            </trans-unit>
+            <trans-unit id="tl_reviews.quote.1">
+                <source>Enter the quote of the author</source>
+                <target>Enter the quote of the author</target>
+            </trans-unit>
+            <trans-unit id="tl_reviews.invisible.0">
+                <source>Invisible</source>
+                <target>Invisible</target>
+            </trans-unit>
+            <trans-unit id="tl_reviews.invisible.1">
+                <source>Hide the review on the website</source>
+                <target>Hide the review on the website</target>
+            </trans-unit>
+            <trans-unit id="tl_reviews.noEntriesFound">
+                <source>There were no entries found for your selection.</source>
+                <target>There were no entries found for your selection.</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
