@@ -13,6 +13,10 @@
                 <source>Expert settings</source>
                 <target>Expert settings</target>
             </trans-unit>
+            <trans-unit id="tl_reviews.showReviews">
+                <source>Show reviews</source>
+                <target>Show reviews</target>
+            </trans-unit>
             <trans-unit id="tl_reviews.new.0">
                 <source>New review</source>
                 <target>New review</target>

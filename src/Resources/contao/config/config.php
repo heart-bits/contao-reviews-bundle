@@ -3,9 +3,7 @@
 /**
  * Back end modules
  */
-$GLOBALS['BE_MOD']['content']['reviews'] = array(
-    'tables' => array('tl_reviews')
-);
+array_push($GLOBALS['BE_MOD']['content']['companies']['tables'], 'tl_reviews');
 
 /**
  * Content elements

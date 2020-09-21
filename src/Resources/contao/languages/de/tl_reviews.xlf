@@ -13,6 +13,10 @@
                 <source>Expert settings</source>
                 <target>Experteneinstellungen</target>
             </trans-unit>
+            <trans-unit id="tl_reviews.showReviews">
+                <source>Show reviews</source>
+                <target>Rezensionen anzeigen</target>
+            </trans-unit>
             <trans-unit id="tl_reviews.new.0">
                 <source>New review</source>
                 <target>Neue Rezension</target>

@@ -7,12 +7,14 @@ $GLOBALS['TL_DCA']['tl_reviews'] = array
     'config' => array
     (
         'dataContainer' => 'Table',
+        'ptable' => 'tl_contacts',
         'enableVersioning' => true,
         'sql' => array
         (
             'keys' => array
             (
-                'id' => 'primary'
+                'id' => 'primary',
+                'pid' => 'index'
             )
         ),
     ),
@@ -22,10 +24,11 @@ $GLOBALS['TL_DCA']['tl_reviews'] = array
     (
         'sorting' => array
         (
-            'mode' => 2,
+            'mode' => 4,
             'fields' => array('title'),
-            'flag' => 1,
-            'panelLayout' => 'filter;sort,search,limit'
+            'panelLayout' => 'limit',
+            'headerFields' => array('lastname', 'firstname'),
+            'child_record_callback' => array('tl_reviews', 'listContacts'),
         ),
         'label' => array
         (
@@ -51,6 +54,18 @@ $GLOBALS['TL_DCA']['tl_reviews'] = array
                 'label' => &$GLOBALS['TL_LANG']['tl_reviews']['edit'],
                 'href' => 'act=edit',
                 'icon' => 'edit.gif'
+            ),
+            'copy' => array
+            (
+                'label' => &$GLOBALS['TL_LANG']['tl_contacts']['copy'],
+                'href' => 'act=paste&amp;mode=copy',
+                'icon' => 'copy.svg',
+                'attributes' => 'onclick="Backend.getScrollOffset()"'
+            ),
+            'cut' => array
+            (
+                'href' => 'act=paste&amp;mode=cut',
+                'icon' => 'cut.svg'
             ),
             'delete' => array
             (
@@ -90,6 +105,11 @@ $GLOBALS['TL_DCA']['tl_reviews'] = array
             'sql' => "int(10) unsigned NOT NULL auto_increment"
         ),
 
+        'pid' => array
+        (
+            'sql' => "int(10) unsigned NOT NULL default '0'",
+        ),
+
         'tstamp' => array
         (
             'sql' => "int(10) unsigned NOT NULL default '0'"
@@ -106,18 +126,6 @@ $GLOBALS['TL_DCA']['tl_reviews'] = array
                 'tl_class' => 'w50 clr'
             ),
             'sql' => "varchar(255) NOT NULL default ''"
-        ),
-
-        'author' => array
-        (
-            'exclude' => true,
-            'sql' => 'int(100) unsigned NULL',
-            'foreignKey' => 'tl_contacts.CONCAT(lastname,", ",firstname)',
-            'inputType' => 'select',
-            'eval' => array(
-                'includeBlankOption' => true,
-                'tl_class' => 'w50 clr'
-            )
         ),
 
         'quote' => array
@@ -267,5 +275,17 @@ class tl_reviews extends \Backend
         }
 
         $objVersions->create();
+    }
+
+    /**
+     * List a review
+     *
+     * @param array $arrRow
+     *
+     * @return string
+     */
+    public function listContacts($arrRow)
+    {
+        return '<div class="tl_content_left">' . $arrRow['title'] . '</div>';
     }
 }

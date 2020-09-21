@@ -61,10 +61,10 @@ class Review extends ContentElement
                 $i = 0;
                 foreach ($reviewData as $review) {
                     foreach ($review as $key => $value) {
-                        if ($key === 'author') {
-                            $contact = Database::getInstance()->prepare("SELECT lastname, firstname, singleSRC, position, department, company FROM tl_contacts WHERE id=?")->execute($value);
+                        if ($key === 'pid') {
+                            $contact = Database::getInstance()->prepare("SELECT lastname, firstname, singleSRC, position, department, pid FROM tl_contacts WHERE id=?")->execute($value);
                             $department = Database::getInstance()->prepare("SELECT title FROM tl_departments WHERE id=?")->execute($contact->department);
-                            $company = Database::getInstance()->prepare("SELECT title, href FROM tl_companies WHERE id=?")->execute($contact->company);
+                            $company = Database::getInstance()->prepare("SELECT title, href FROM tl_companies WHERE id=?")->execute($contact->pid);
                             $arrReviews[$i][$key]['lastname'] = $contact->lastname;
                             $arrReviews[$i][$key]['firstname'] = $contact->firstname;
                             $arrReviews[$i][$key]['position'] = $contact->position;

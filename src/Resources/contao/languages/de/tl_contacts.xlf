@@ -1,0 +1,10 @@
+<?xml version="1.0" ?><xliff version="1.1">
+    <file datatype="php" original="src/Resources/contao/languages/en/tl_contacts.php" source-language="en" target-language="de">
+        <body>
+            <trans-unit id="tl_contacts.showReviews">
+                <source>Show reviews from contact ID %s</source>
+                <target>Rezensionen des Kontaktes ID %s anzeigen</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

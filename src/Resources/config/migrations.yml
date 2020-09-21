@@ -1,0 +1,6 @@
+services:
+    Heartbits\ContaoReviews\Migration\ReviewMigration:
+        arguments:
+            - '@database_connection'
+        tags:
+            - { name: contao.migration, priority: 0 }
